@@ -6,8 +6,28 @@
 	<select id="selectTTINFO" resultType="com.test.sp.vo.TtInfo"> 
 		select * from tt_info
 	</select>
+	
 	<select id="selectTTINFOone" resultType="com.test.sp.vo.TtInfo">
 		select * from tt_info
-		where tnum=#{tnum};
+		where tnum=#{tnum}
 	</select>
+	
+	<insert id="insertTTINFO">
+		insert into tt_info(tname,tage)
+		values(#{tname},#{tage})
+	</insert>
+	
+	<update id="updateTTINFO">
+		update tt_info
+		<set>
+			<if test="tname!=null">tname=#{tname},</if>
+			<if test="tage!=null">tage=#{tage}</if>
+		</set>
+		where tnum=#{tnum}
+	</update>
+	
+	<delete id="deleteTTINFO">
+		delete from tt_info
+		where tnum=#{tnum}
+	</delete>
 </mapper>

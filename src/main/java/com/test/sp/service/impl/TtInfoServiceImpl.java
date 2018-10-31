@@ -26,4 +26,19 @@ public class TtInfoServiceImpl implements TtInfoService {
 		return tidao.getTtInfo(tnum);
 	}
 
+	@Override
+	public int insertTtInfo(TtInfo ti) {
+		return tidao.insertTtInfo(ti);
+	}
+
+	@Override
+	public int updateTtInfo(TtInfo ti) {
+		return tidao.updateTtInfo(ti);
+	}
+
+	@Override
+	public int deleteTtInfo(Integer tnum) {
+		return tidao.deleteTtInfo(tnum);
+	}
+
 }

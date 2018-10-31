@@ -8,4 +8,7 @@ public interface TtInfoService {
 
 	public List<TtInfo> getTtInfoList();
 	public TtInfo getTtInfo(Integer tnum);
+	public int insertTtInfo(TtInfo ti);
+	public int updateTtInfo(TtInfo ti);
+	public int deleteTtInfo(Integer tnum);
 }

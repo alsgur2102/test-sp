@@ -25,4 +25,19 @@ public class TtInfoDAOImpl implements TtInfoDAO {
 		return ss.selectOne("com.test.sp.TTINFO.selectTTINFOone",tnum); 
 	}
 
+	@Override
+	public int insertTtInfo(TtInfo ti) {
+		return ss.insert("com.test.sp.TTINFO.insertTTINFO",ti);
+	}
+
+	@Override
+	public int updateTtInfo(TtInfo ti) {
+		return ss.update("com.test.sp.TTINFO.updateTTINFO",ti); 
+	}
+
+	@Override
+	public int deleteTtInfo(Integer tnum) {
+		return ss.delete("com.test.sp.TTINFO.deleteTTINFO",tnum); 
+	}
+
 }
